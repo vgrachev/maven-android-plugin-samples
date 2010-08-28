@@ -58,7 +58,7 @@
                             <platform>3</platform>
                         </sdk>
                         <emulator>
-                            <avd>22</avd>
+                            <avd>16</avd>
                         </emulator>
                         <deleteConflictingFiles>true</deleteConflictingFiles>
                         <undeployBeforeDeploy>true</undeployBeforeDeploy>
