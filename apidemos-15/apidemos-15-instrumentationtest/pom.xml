@@ -52,7 +52,7 @@
             <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-15</groupId>
             <artifactId>apidemos-15-app</artifactId>
             <version>${project.version}</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <type>jar</type>
         </dependency>
     </dependencies>
