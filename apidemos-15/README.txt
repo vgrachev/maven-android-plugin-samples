@@ -11,4 +11,9 @@ apidemos-15-instrumentationtest
 
     cd apidemos-15-instrumentationtest
     mvn install
+
+You can have it all built, the app deployed and the tests executed in one command line call if you run
     
+    mvn clean install
+
+in the apidemos-15 folder.
