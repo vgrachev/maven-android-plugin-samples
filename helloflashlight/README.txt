@@ -12,12 +12,14 @@ The following steps were done for the project creation.
 - created project with Android SDK using Eclipse tool (new android project...)
 - some hacking to have a little flashlight application with buttons to change color
 - added minimal pom.xml file
-- built application with running emulator
+- built application with running emulator:
 
 mvn clean install android:deploy
 
 - if an avd with the name 16 with platform 1.6 or higher exists the emulator can be started with
 
 mvn android:emulator-start
+
+- test the application on emulator (or device) by starting it and pressing the buttons to change the flashlight color
 
 
