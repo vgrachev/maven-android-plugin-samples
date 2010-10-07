@@ -20,7 +20,7 @@
     <artifactId>apidemos-15</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Maven Android Plugin - samples - Android SDK 1.5 ApiDemos</name>
+    <name>Android SDK 1.5 ApiDemos</name>
 
     <dependencyManagement>
         <dependencies>
