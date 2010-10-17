@@ -9,3 +9,4 @@ target
 gen
 bin
 .DS_Store
+seed.txt
