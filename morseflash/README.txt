@@ -28,8 +28,30 @@ Release Build
 A release type build like it would be necessary for publication of the application to the Android market and the necessary
 steps for it is configured. The following preparation for the execution is necessary:
 
-TODO
+- Create your key following the instructions at http://developer.android.com/guide/publishing/app-signing.html#cert
+
+- Create a profile like this
+
+    <settings>
+    <profiles>
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <sign.keystore>/absolute/path/to/your.keystore</sign.keystore>
+                <sign.alias>youralias</sign.alias>
+                <sign.keypass>keypass</sign.keypass>
+                <sign.storepass>storepass</sign.storepass>
+            </properties>
+        </profile>
+    </profiles>
+    </settings>
+
+in your settings.xml file in ~/.m2
 
 After this preparation the release build can be invoked with
 
 mvn clean install -P release
+
+which will in turn sign and zipalign the apk.
