@@ -53,13 +53,6 @@
                         </zipalign>
                         <deleteConflictingFiles>true</deleteConflictingFiles>
                         <undeployBeforeDeploy>true</undeployBeforeDeploy>
-
-                        <!-- BEGIN: SDK installation config -->
-                        <revision>06</revision>
-                        <overwrite>false</overwrite>
-                        <agree>true</agree>
-                        <verbose>true</verbose>
-                        <!-- END: SDK installation config -->
                     </configuration>
                 </plugin>
             </plugins>
