@@ -36,6 +36,10 @@
                     <version>2.3</version>
                 </plugin>
                 <plugin>
+                    <artifactId>maven-jarsigner-plugin</artifactId>
+                    <version>1.2</version>
+                </plugin>
+                <plugin>
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                     <artifactId>maven-android-plugin</artifactId>
                     <version>2.6.0</version>
@@ -61,6 +65,16 @@
                         <verbose>true</verbose>
                         <!-- END: SDK installation config -->
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.pyx4me</groupId>
+                    <artifactId>proguard-maven-plugin</artifactId>
+                    <version>2.0.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>1.5</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -110,7 +124,7 @@
 
     <profiles>
         <profile>
-            <!-- the standard profile runs the instrumentations tests -->
+            <!-- the standard profile runs the instrumentation tests -->
             <id>standard</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -122,7 +136,7 @@
             </modules>
         </profile>
         <profile>
-            <!-- the release profile does sign, zipalign... but does not run instrumentation tests -->
+            <!-- the release profile does sign, proguard, zipalign ... but does not run instrumentation tests -->
             <id>release</id>
             <!-- via this activation the profile is automatically used when the release is done with the maven release
             plugin -->
