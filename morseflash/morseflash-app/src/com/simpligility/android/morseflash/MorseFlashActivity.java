@@ -1,6 +1,7 @@
 package com.simpligility.android.morseflash;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,13 +17,8 @@ import com.simpligility.android.morse.MorseCodeConverter;
  * @author Manfred Moser <manfred@simpligility.com>
  */
 public class MorseFlashActivity extends Activity {
-    private static long MULTIPLIER = 5;
-    MorseFlashApplication application;
-    String message;
-    Boolean repeat;
-    LinearLayout page;
-    private
-    long startTime;
+
+    private LinearLayout page;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +26,15 @@ public class MorseFlashActivity extends Activity {
         setContentView(R.layout.morseflash);
         page = (LinearLayout) findViewById(R.id.page);
 
-        application = (MorseFlashApplication) getApplication();
-        message = application.message;
+        MorseFlashApplication application = (MorseFlashApplication) getApplication();
+        String message = application.message;
 
-        startTime = System.currentTimeMillis();
         Handler myHandler = new Handler();
         long[] morseCode = MorseCodeConverter.pattern(message);
         long total = 0;
         for (int i = 0; i < morseCode.length; i++) {
             total = total + morseCode[i];
+            long MULTIPLIER = 5;
             if (i % 2 == 0) {
                 myHandler.postDelayed(new ColorSwitch(total, Color.WHITE), total * MULTIPLIER);
             } else {
@@ -49,7 +45,7 @@ public class MorseFlashActivity extends Activity {
 
     class ColorSwitch implements Runnable {
 
-        int color;
+        final int color;
         long delay;
 
         ColorSwitch(long delay, int color) {
