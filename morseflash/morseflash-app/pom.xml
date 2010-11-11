@@ -39,11 +39,41 @@
         <finalName>${project.artifactId}</finalName>
         <sourceDirectory>src</sourceDirectory>
         <testSourceDirectory>test</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>${basedir}/res</directory>
+                <filtering>true</filtering>
+                <targetPath>${project.build.outputDirectory}/filtered-res</targetPath>
+            </resource>
+            <resource>
+                <targetPath>${project.basedir}/target/filtered-manifest</targetPath>
+                <filtering>true</filtering>
+                <directory>${basedir}</directory>
+                <includes>
+                    <include>AndroidManifest.xml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
                 <extensions>true</extensions>
+                <configuration>
+                    <androidManifestFile>${project.build.directory}/filtered-manifest/AndroidManifest.xml</androidManifestFile>
+                    <resourceDirectory>${project.build.outputDirectory}/filtered-res</resourceDirectory>
+                </configuration>
                 <executions>
                     <execution>
                         <id>startEmulator</id>
@@ -57,6 +87,18 @@
                         <phase>package</phase>
                         <goals>
                             <goal>zipalign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>parse-version</id>
+                        <goals>
+                            <goal>parse-version</goal>
                         </goals>
                     </execution>
                 </executions>
