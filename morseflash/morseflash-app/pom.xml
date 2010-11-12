@@ -108,6 +108,27 @@
 
     <profiles>
         <profile>
+            <id>development</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <deployment.stage>In Development</deployment.stage>
+            </properties>
+        </profile>
+        <profile>
+            <id>staging</id>
+            <properties>
+                <deployment.stage>In Staging/QA</deployment.stage>
+            </properties>
+        </profile>
+        <profile>
+            <id>production</id>
+            <properties>
+                <deployment.stage>In Production</deployment.stage>
+            </properties>
+        </profile>
+        <profile>
             <id>release</id>
             <!-- via this activation the profile is automatically used when the release is done with the maven release
             plugin -->
