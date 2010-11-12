@@ -1,13 +1,9 @@
 package com.simpligility.android.morseflash;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.SystemClock;
-import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import com.simpligility.android.morse.MorseCodeConverter;
 
