@@ -12,6 +12,10 @@
     <packaging>apk</packaging>
     <name>MorseFlash - App</name>
 
+    <properties>
+        <environment>development</environment>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.simpligility.android.morse</groupId>
@@ -46,7 +50,7 @@
                 <targetPath>${project.build.outputDirectory}/filtered-res</targetPath>
             </resource>
             <resource>
-                <targetPath>${project.basedir}/target/filtered-manifest</targetPath>
+                <targetPath>${project.build.directory}/filtered-manifest</targetPath>
                 <filtering>true</filtering>
                 <directory>${basedir}</directory>
                 <includes>
@@ -109,23 +113,23 @@
     <profiles>
         <profile>
             <id>development</id>
+            <!-- using this since activeByDefault does not work well with multiple profiles -->
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>environment</name>
+                    <value>!production</value>
+                </property>
             </activation>
             <properties>
                 <deployment.stage>In Development</deployment.stage>
-            </properties>
-        </profile>
-        <profile>
-            <id>staging</id>
-            <properties>
-                <deployment.stage>In Staging/QA</deployment.stage>
+                <android.debuggable>true</android.debuggable>
             </properties>
         </profile>
         <profile>
             <id>production</id>
             <properties>
                 <deployment.stage>In Production</deployment.stage>
+                <android.debuggable>false</android.debuggable>
             </properties>
         </profile>
         <profile>
