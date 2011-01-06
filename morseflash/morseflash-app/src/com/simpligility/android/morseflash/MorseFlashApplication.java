@@ -15,6 +15,7 @@ public class MorseFlashApplication extends Application {
 
     private static boolean strictModeAvailable;
 
+    // use the StrictModeWrapper to see if we are running on Android 2.3 or higher and StrictMode is available
     static {
         try {
             StrictModeWrapper.checkAvailable();
@@ -27,6 +28,7 @@ public class MorseFlashApplication extends Application {
     @Override
     public void onCreate() {
         if (strictModeAvailable) {
+            // check if android:debuggable is set to true
             int applicationFlags = getApplicationInfo().flags;
             if ((applicationFlags & ApplicationInfo.FLAG_DEBUGGABLE) != 0) {
                 StrictModeWrapper.enableDefaults();
