@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:versionName="${project.version}"
-          android:versionCode="${parsedVersion.majorVersion}${parsedVersion.minorVersion}${parsedVersion.incrementalVersion}"
+          android:versionCode="${versionCode}"
           package="com.simpligility.android.morseflash">
     <application android:icon="@drawable/icon" android:label="@string/app_name" android:name="MorseFlashApplication"
             android:debuggable="${android.debuggable}">
