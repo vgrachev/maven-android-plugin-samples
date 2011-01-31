@@ -45,14 +45,14 @@
         <testSourceDirectory>test</testSourceDirectory>
         <resources>
             <resource>
-                <directory>${basedir}/res</directory>
+                <directory>${project.basedir}/res</directory>
                 <filtering>true</filtering>
-                <targetPath>${project.build.outputDirectory}/filtered-res</targetPath>
+                <targetPath>${project.build.directory}/filtered-res</targetPath>
             </resource>
             <resource>
                 <targetPath>${project.build.directory}/filtered-manifest</targetPath>
                 <filtering>true</filtering>
-                <directory>${basedir}</directory>
+                <directory>${project.basedir}</directory>
                 <includes>
                     <include>AndroidManifest.xml</include>
                 </includes>
@@ -76,7 +76,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <androidManifestFile>${project.build.directory}/filtered-manifest/AndroidManifest.xml</androidManifestFile>
-                    <resourceDirectory>${project.build.outputDirectory}/filtered-res</resourceDirectory>
+                    <resourceDirectory>${project.build.directory}/filtered-res</resourceDirectory>
                 </configuration>
                 <executions>
                     <execution>
