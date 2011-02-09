@@ -44,11 +44,24 @@
         <sourceDirectory>src</sourceDirectory>
         <testSourceDirectory>test</testSourceDirectory>
         <resources>
+            <!-- a pair definition for resource filtering of xml files only (not binary files since they get mangled -->
             <resource>
                 <directory>${basedir}/res</directory>
                 <filtering>true</filtering>
                 <targetPath>${project.build.outputDirectory}/filtered-res</targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
             </resource>
+            <resource>
+                <directory>${basedir}/res</directory>
+                <filtering>false</filtering>
+                <targetPath>${project.build.outputDirectory}/filtered-res</targetPath>
+                <excludes>
+                    <exclude>**/*.xml</exclude>
+                </excludes>
+            </resource>
+
             <resource>
                 <targetPath>${project.build.directory}/filtered-manifest</targetPath>
                 <filtering>true</filtering>
