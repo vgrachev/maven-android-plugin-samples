@@ -9,9 +9,13 @@ usage of the native compilation capabilities of the Maven Android plugin.
 
 The Android Native Development Kit (Android NDK) must be installed on the local
 machine.  In order to configure the NDK for Maven Android plugin, set an environment
-variable to point to the NDK install directory
+variable to point to the NDK install directory.
 
 export ANDROID_NDK_HOME=<path to the Android NDK>
+
+Alternatively, you can provide the path to the NDK on the Maven command line:
+
+mvn -Dandroid.ndk.path=<path to the Android NDK> clean install
 
 -- Native Samples Scope
 
