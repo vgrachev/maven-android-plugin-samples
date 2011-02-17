@@ -23,7 +23,7 @@
  *
 */
 jstring
-Java_com_acme_hellojni_mixed_HelloJni_stringFromJNI( JNIEnv* env,
+Java_com_acme_hellojni_HelloJni_stringFromJNI( JNIEnv* env,
                                                   jobject thiz )
 {
     return (*env)->NewStringUTF(env, "Hello from Mixed JNI!");

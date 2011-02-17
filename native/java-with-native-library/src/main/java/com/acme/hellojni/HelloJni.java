@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.acme.hellojni.java;
+package com.acme.hellojni;
 
 import android.app.Activity;
 import android.widget.TextView;
@@ -54,12 +54,12 @@ public class HelloJni extends Activity
      */
     public native String  unimplementedStringFromJNI();
 
-    /* this is used to load the 'hello-jni' library on application
+    /* this is used to load the 'native-code-from-project' library on application
      * startup. The library has already been unpacked into
-     * /data/data/com.acme.HelloJni/lib/libnative-code.so at
+     * /data/data/com.acme.HelloJni/lib/libnative-code-from-project.so at
      * installation time by the package manager.
      */
     static {
-        System.loadLibrary("native-code");
+        System.loadLibrary("native-code-from-project");
     }
 }

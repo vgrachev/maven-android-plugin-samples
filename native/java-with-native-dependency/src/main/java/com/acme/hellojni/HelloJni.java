@@ -13,17 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.acme.hellojni.mixed;
+package com.acme.hellojni;
 
 import android.app.Activity;
 import android.widget.TextView;
 import android.os.Bundle;
 
-/* This trivial JNI example is taken directly from the Android samples.
- *
- * apps/samples/hello-jni/project/src/com/example/mixed/HelloJni/HelloJni.java
- *
-*/
 public class HelloJni extends Activity
 {
     /** Called when the activity is first created. */
@@ -42,7 +37,7 @@ public class HelloJni extends Activity
     }
 
     /* A native method that is implemented by the
-     * 'mixed code' native library, which is packaged
+     * 'hello-jni' native library, which is packaged
      * with this application.
      */
     public native String  stringFromJNI();
@@ -61,10 +56,10 @@ public class HelloJni extends Activity
 
     /* this is used to load the 'hello-jni' library on application
      * startup. The library has already been unpacked into
-     * /data/data/com.acme.HelloJni/lib/libhello-jni.so at
+     * /data/data/com.acme.HelloJni/lib/libnative-code.so at
      * installation time by the package manager.
      */
     static {
-        System.loadLibrary("mixed-code");
+        System.loadLibrary("native-code");
     }
 }
