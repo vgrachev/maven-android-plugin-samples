@@ -48,7 +48,7 @@
             <resource>
                 <directory>${basedir}/res</directory>
                 <filtering>true</filtering>
-                <targetPath>${project.build.outputDirectory}/filtered-res</targetPath>
+                <targetPath>${project.build.directory}/filtered-res</targetPath>
                 <includes>
                     <include>**/*.xml</include>
                 </includes>
@@ -56,7 +56,7 @@
             <resource>
                 <directory>${basedir}/res</directory>
                 <filtering>false</filtering>
-                <targetPath>${project.build.outputDirectory}/filtered-res</targetPath>
+                <targetPath>${project.build.directory}/filtered-res</targetPath>
                 <excludes>
                     <exclude>**/*.xml</exclude>
                 </excludes>
@@ -89,7 +89,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <androidManifestFile>${project.build.directory}/filtered-manifest/AndroidManifest.xml</androidManifestFile>
-                    <resourceDirectory>${project.build.outputDirectory}/filtered-res</resourceDirectory>
+                    <resourceDirectory>${project.build.directory}/filtered-res</resourceDirectory>
                 </configuration>
                 <executions>
                     <execution>
