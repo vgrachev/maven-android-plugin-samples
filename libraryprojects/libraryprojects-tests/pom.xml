@@ -25,6 +25,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.jayway.android.robotium</groupId>
+            <artifactId>robotium-solo</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.jayway.maven.plugins.android.generation2.samples.libraryprojects</groupId>
             <artifactId>libraryprojects-mainapp</artifactId>
             <version>1.0.0-SNAPSHOT</version>
