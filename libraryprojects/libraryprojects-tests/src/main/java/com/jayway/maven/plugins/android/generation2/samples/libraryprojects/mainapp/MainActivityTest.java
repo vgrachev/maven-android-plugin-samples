@@ -27,4 +27,19 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
     public void testFrameworkLaunches() {
     }
 
+    /**
+     * Tests that correct texts appear.
+     */
+    public void testCorrectTextsAppear() {
+        assertTrue(robotium.searchText("Hello World, MainActivity"));
+        assertTrue(robotium.searchText("This is from a resource in libraryprojects-lib1."));
+        assertTrue(robotium.searchText("This is from a resource in libraryprojects-lib2."));
+        assertTrue(robotium.searchText("This is from an asset in libraryprojects-lib1."));
+        assertTrue(robotium.searchText("This is from an asset in libraryprojects-lib2."));
+        assertTrue(robotium.searchText("This is from a class in libraryprojects-lib1."));
+        assertTrue(robotium.searchText("This is from a class in libraryprojects-lib2."));
+        assertTrue(robotium.searchText("This is from a java resource in libraryprojects-lib1."));
+        assertTrue(robotium.searchText("This is from a java resource in libraryprojects-lib2."));
+    }
+
 }
