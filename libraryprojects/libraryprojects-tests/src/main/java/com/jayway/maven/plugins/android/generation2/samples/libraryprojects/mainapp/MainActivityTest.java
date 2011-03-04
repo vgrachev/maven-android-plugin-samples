@@ -31,6 +31,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
      * Tests that correct texts appear.
      */
     public void testCorrectTextsAppear() {
+        assertTrue(robotium.waitForActivity("MainActivity", 20000));
         assertTrue(robotium.searchText("Hello World, MainActivity"));
         assertTrue(robotium.searchText("This is from a resource in libraryprojects-lib1."));
         assertTrue(robotium.searchText("This is from a resource in libraryprojects-lib2."));
