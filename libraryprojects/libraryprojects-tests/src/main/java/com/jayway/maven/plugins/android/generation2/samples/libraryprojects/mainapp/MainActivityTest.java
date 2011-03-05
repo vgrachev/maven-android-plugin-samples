@@ -43,4 +43,21 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         assertTrue(robotium.searchText("This is from a java resource in libraryprojects-lib2."));
     }
 
+
+    /**
+     * Finalizes the Robotium Solo instance, as recommended by Robotium's Getting Started guide.
+     *
+     * @throws Exception if {@code super.tearDown()} does.
+     */
+    @Override
+    public void tearDown() throws Exception {
+        try {
+            robotium.finalize();
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+        getActivity().finish();
+        super.tearDown();
+    }
+
 }
