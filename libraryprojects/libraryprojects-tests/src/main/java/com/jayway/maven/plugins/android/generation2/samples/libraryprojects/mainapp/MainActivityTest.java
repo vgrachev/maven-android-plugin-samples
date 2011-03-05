@@ -21,25 +21,46 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         robotium = new Solo(getInstrumentation(), getActivity());
     }
 
-    /**
-     * Tests that the framework launches at all.
-     */
-    public void testFrameworkLaunches() {
+    public void testFrameworkLaunchesAtAll() {
     }
 
-    /**
-     * Tests that correct texts appear.
-     */
-    public void testCorrectTextsAppear() {
+    public void testMainActivityAppears() {
         assertTrue(robotium.waitForActivity("MainActivity", 20000));
+    }
+
+    public void testMainActivityTextAppears() {
         assertTrue(robotium.searchText("Hello World, MainActivity"));
+    }
+
+    public void testLib1ResourceAppears() {
         assertTrue(robotium.searchText("This is from a resource in libraryprojects-lib1."));
+    }
+
+    public void testLib2ResourceAppears() {
         assertTrue(robotium.searchText("This is from a resource in libraryprojects-lib2."));
+    }
+
+    public void testLib1AssetAppears() {
         assertTrue(robotium.searchText("This is from an asset in libraryprojects-lib1."));
+    }
+
+    public void testLib2AssetAppears() {
         assertTrue(robotium.searchText("This is from an asset in libraryprojects-lib2."));
+    }
+
+    public void testLib1ClassAppears() {
         assertTrue(robotium.searchText("This is from a class in libraryprojects-lib1."));
+    }
+
+    public void testLib2ClassAppears() {
         assertTrue(robotium.searchText("This is from a class in libraryprojects-lib2."));
+    }
+
+    public void testLib1JavaResourceAppears() {
         assertTrue(robotium.searchText("This is from a java resource in libraryprojects-lib1."));
+    }
+
+    public void testLib2JavaResourceAppears() {
         assertTrue(robotium.searchText("This is from a java resource in libraryprojects-lib2."));
     }
 
