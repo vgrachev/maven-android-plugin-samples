@@ -27,6 +27,7 @@
         <module>helloflashlight</module>
         <module>morseflash</module>
         <module>scala</module>
+        <module>libraryprojects</module>
     </modules>
 
     <url>http://code.google.com/p/maven-android-plugin</url>
