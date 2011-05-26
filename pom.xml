@@ -23,11 +23,12 @@
     <name>Maven Android Plugin - samples</name>
 
     <modules>
-        <module>apidemos-15</module>
-        <module>helloflashlight</module>
-        <module>morseflash</module>
-        <module>scala</module>
-        <module>libraryprojects</module>
+        <!--<module>apidemos-15</module>-->
+        <!--<module>helloflashlight</module>-->
+        <!--<module>morseflash</module>-->
+        <!--<module>scala</module>-->
+        <!--<module>libraryprojects</module>-->
+        <module>native</module>
     </modules>
 
     <url>http://code.google.com/p/maven-android-plugin</url>
