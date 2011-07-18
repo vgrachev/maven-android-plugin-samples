@@ -33,7 +33,6 @@
                         <!-- the name of the avd device to use for starting the emulator -->
                         <avd>16</avd>
                     </emulator>
-                    <deleteConflictingFiles>true</deleteConflictingFiles>
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
                 <extensions>true</extensions>

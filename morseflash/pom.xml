@@ -71,7 +71,6 @@
                         <zipalign>
                             <verbose>true</verbose>
                         </zipalign>
-                        <deleteConflictingFiles>true</deleteConflictingFiles>
                         <undeployBeforeDeploy>true</undeployBeforeDeploy>
                     </configuration>
                 </plugin>
