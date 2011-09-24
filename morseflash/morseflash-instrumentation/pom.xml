@@ -44,7 +44,9 @@
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>android-maven-plugin</artifactId>
                 <configuration>
-                    <enableIntegrationTest>true</enableIntegrationTest>
+                    <test>
+                        <skip>true</skip>
+                    </test>
                 </configuration>
                 <extensions>true</extensions>
             </plugin>
