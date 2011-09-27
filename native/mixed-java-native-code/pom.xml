@@ -33,7 +33,7 @@
 
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
-                <artifactId>android-maven-plugin</artifactId>
+                <artifactId>maven-android-plugin</artifactId>
                 <executions>
                     <!--
                     Add the execution of the ndk-build goal - this will compile the native code in addition

@@ -85,7 +85,7 @@
             </plugin>
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
-                <artifactId>android-maven-plugin</artifactId>
+                <artifactId>maven-android-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
                     <androidManifestFile>${project.build.directory}/filtered-manifest/AndroidManifest.xml</androidManifestFile>
@@ -260,7 +260,7 @@
                     <!-- the signed apk then needs to be zipaligned -->
                     <plugin>
                         <groupId>com.jayway.maven.plugins.android.generation2</groupId>
-                        <artifactId>android-maven-plugin</artifactId>
+                        <artifactId>maven-android-plugin</artifactId>
                         <inherited>true</inherited>
                         <configuration>
                             <sign>
