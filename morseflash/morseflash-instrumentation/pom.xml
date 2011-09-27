@@ -45,7 +45,7 @@
                 <artifactId>maven-android-plugin</artifactId>
                 <configuration>
                     <test>
-                        <skip>true</skip>
+                        <skip>false</skip>
                     </test>
                 </configuration>
                 <extensions>true</extensions>
