@@ -1,6 +1,6 @@
 HelloFlashlight is a simple sample application written by Manfred Moser <manfred@simpligility.com>
 
-It was created to demonstrate the minimal pom.xml setup needed to use the maven-android-plugin
+It was created to demonstrate the minimal pom.xml setup needed to use the android-maven-plugin
 and is used as an example in the book Maven: The Complete Reference
 
 See the book chapter for more details.
