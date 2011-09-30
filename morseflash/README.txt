@@ -2,7 +2,7 @@ MorseFlash
 
 MorseFlash is a (very) simple sample application written by Manfred Moser <manfred@simpligility.com>
 
-It was created to demonstrate the project setup needed to use the maven-android-plugin in a more complex project
+It was created to demonstrate the project setup needed to use the android-maven-plugin in a more complex project
 including separate libraries as well as instrumentation testing.
 
 In the following are a couple of pointers to building the project.
