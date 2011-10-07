@@ -61,15 +61,6 @@
                     <exclude>**/*.xml</exclude>
                 </excludes>
             </resource>
-
-            <resource>
-                <directory>${project.basedir}</directory>
-                <filtering>true</filtering>
-                <targetPath>${project.build.directory}/filtered-manifest</targetPath>
-                <includes>
-                    <include>AndroidManifest.xml</include>
-                </includes>
-            </resource>
         </resources>
         <plugins>
             <plugin>
@@ -88,8 +79,10 @@
                 <artifactId>android-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <androidManifestFile>${project.build.directory}/filtered-manifest/AndroidManifest.xml</androidManifestFile>
                     <resourceDirectory>${project.build.directory}/filtered-res</resourceDirectory>
+                    <manifest>
+                        <debuggable>true</debuggable>
+                    </manifest>
                 </configuration>
                 <executions>
                     <execution>
@@ -97,6 +90,13 @@
                         <phase>initialize</phase>
                         <goals>
                             <goal>emulator-start</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>manifestUpdate</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>manifest-update</goal>
                         </goals>
                     </execution>
                     <execution>
@@ -123,14 +123,12 @@
             </activation>
             <properties>
                 <deployment.stage>In Development</deployment.stage>
-                <android.debuggable>true</android.debuggable>
             </properties>
         </profile>
         <profile>
             <id>production</id>
             <properties>
                 <deployment.stage>In Production</deployment.stage>
-                <android.debuggable>false</android.debuggable>
             </properties>
         </profile>
         <profile>
@@ -272,8 +270,19 @@
                                 <outputApk>${project.build.directory}/${project.artifactId}-signed-aligned.apk
                                 </outputApk>
                             </zipalign>
+                            <manifest>
+                                <debuggable>false</debuggable>
+                                <versionCodeAutoIncrement>true</versionCodeAutoIncrement>
+                            </manifest>
                         </configuration>
                         <executions>
+                            <execution>
+                                <id>manifestUpdate</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    <goal>manifest-update</goal>
+                                </goals>
+                            </execution>
                             <execution>
                                 <id>alignApk</id>
                                 <phase>package</phase>
