@@ -13,6 +13,7 @@
   <modules>
     <module>java-with-native-dependency</module>
     <module>java-with-native-library</module>
+    <module>java-transient-dependency</module>
     <module>native-code</module>
     <module>mixed-java-native-code</module>
   </modules>
