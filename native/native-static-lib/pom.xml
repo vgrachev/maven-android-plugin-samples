@@ -28,9 +28,12 @@
                 <artifactId>android-maven-plugin</artifactId>
                  <extensions>true</extensions>
                  <configuration>
-                   <includes>
-                     <include>**/*.h</include>
-                   </includes>
+                     <headerFilesDirectives>
+                         <directory>${basedir}/jni</directory>
+                         <includes>
+                           <include>**/*.h</include>
+                         </includes>
+                     </headerFilesDirectives>
                  </configuration>
             </plugin>
         </plugins>
