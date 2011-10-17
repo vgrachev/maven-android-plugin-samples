@@ -5,10 +5,15 @@
                               http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
-    <artifactId>java-with-native-library</artifactId>
+    <artifactId>native-code-including-static-lib</artifactId>
+    <name>Android NDK Native Sample including Static Library</name>
 
-    <packaging>apk</packaging>
-    <name>Android Native Java Sample With Native Library</name>
+    <!--
+    Packaging is defined as 'so' - this will indicate to the Maven Android
+    plugin that it is meant to compile the native code.  The resulting native
+    library is attached to the build
+    -->
+    <packaging>so</packaging>
 
     <parent>
         <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
@@ -16,25 +21,26 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <dependencies>
-
-        <dependency>
-            <groupId>com.google.android</groupId>
-            <artifactId>android</artifactId>
-            <version>2.2.1</version>
-            <scope>provided</scope>
-        </dependency>
-
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>android-maven-plugin</artifactId>
-                <extensions>true</extensions>
+                 <extensions>true</extensions>
+              <configuration>
+              <ndkBuildAdditionalCommandline>V=1 -B</ndkBuildAdditionalCommandline></configuration>
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+      <dependency>
+        <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
+        <artifactId>native-static-lib</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <classifier>armeabi</classifier>
+        <type>a</type>
+      </dependency>
+    </dependencies>
 
 </project>

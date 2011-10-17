@@ -12,8 +12,11 @@
 
   <modules>
     <module>java-with-native-dependency</module>
+    <module>java-with-native-statically-linked-dependency</module>
     <module>java-with-native-library</module>
     <module>native-code</module>
+    <module>native-static-lib</module>
+    <module>native-code-including-static-lib</module>
     <module>mixed-java-native-code</module>
   </modules>
 
