@@ -22,9 +22,13 @@ mvn -Dandroid.ndk.path=<path to the Android NDK> clean install
 The examples cover the following scenarios:
 
 - building only a native library (native-code)
-- building a APK referencing a native library as part of the source tree (java-with-native-library)
-- building a APK referencing a native library as a dependency (java-with-native-dependency)
+- building a statically linked library (native-static-lib)
+- build a shared library which links in a previously built, statically linked library (native-code-including-static-lib)
+- building an APK referencing a native library as part of the source tree (java-with-native-library)
+- building an APK referencing a native library as a dependency (java-with-native-dependency)
 - building a native library & APK containing the built library (mixed-java-native-library)
+- building an APK containing native library defined as a transient runtime dependency (java-transient-dependency)
+- building an APK containing the statically linked library (java-with-native-statically-linked-dependency)
 
 -- Building the Native Samples
 
