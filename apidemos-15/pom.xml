@@ -59,10 +59,6 @@
                     </configuration>
                     <extensions>true</extensions>
                 </plugin>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.3</version>
-                </plugin>
             </plugins>
 
         </pluginManagement>
