@@ -18,5 +18,9 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE    := native-static-lib
 LOCAL_SRC_FILES := hello-static.c
-
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/inc
 include $(BUILD_STATIC_LIBRARY)
+
+# Include the Android Maven plugin generated makefile
+# Important: Must be the last import in order for Android Maven Plugins paths to work
+include $(ANDROID_MAVEN_PLUGIN_MAKEFILE)
