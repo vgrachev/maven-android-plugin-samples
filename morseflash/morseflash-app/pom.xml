@@ -86,13 +86,6 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>startEmulator</id>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>emulator-start</goal>
-                        </goals>
-                    </execution>
-                    <execution>
                         <id>manifestUpdate</id>
                         <phase>process-resources</phase>
                         <goals>
