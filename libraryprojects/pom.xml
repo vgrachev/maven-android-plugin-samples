@@ -48,7 +48,6 @@
                     <version>3.0.0-SNAPSHOT</version>
                     <configuration>
                         <sdk>
-                            <path>/home/luigi/dev/lib/androidsdk-14</path>
                             <platform>10</platform>
                         </sdk>
                         <undeployBeforeDeploy>true</undeployBeforeDeploy>
