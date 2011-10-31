@@ -21,7 +21,7 @@
         <artifactId>parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>instrumentationtest</artifactId>
+    <artifactId>instrumentationtests</artifactId>
     <packaging>apk</packaging>
     <name>Android SDK ApiDemos - Instrumentation Test</name>
 
