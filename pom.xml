@@ -23,6 +23,7 @@
     <name>Android Maven Plugin - Samples</name>
 
     <modules>
+        <module>apidemos-android-10</module>
         <module>apidemos-15</module>
         <module>helloflashlight</module>
         <module>morseflash</module>
