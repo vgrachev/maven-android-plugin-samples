@@ -8,7 +8,7 @@
     <artifactId>java-with-native-statically-linked-dependency</artifactId>
 
     <packaging>apk</packaging>
-    <name>Android Native Java Sample Native Statically Linked Dependency</name>
+    <name>Android NDK - Java With Native Statically Linked Dependency</name>
 
     <parent>
         <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>

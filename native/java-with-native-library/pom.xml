@@ -8,7 +8,7 @@
     <artifactId>java-with-native-library</artifactId>
 
     <packaging>apk</packaging>
-    <name>Android Native Java Sample With Native Library</name>
+    <name>Android NDK - Java With Native Library</name>
 
     <parent>
         <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>

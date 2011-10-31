@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
     <artifactId>native-static-lib</artifactId>
-    <name>Android NDK Native Sample Static Library</name>
+    <name>Android NDK - Native Static Library</name>
 
     <!--
     Packaging is defined as 'so' - this will indicate to the Maven Android

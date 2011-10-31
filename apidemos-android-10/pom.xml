@@ -20,8 +20,8 @@
     <artifactId>parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Android SDK 2.3.4 API Level 10 ApiDemos - Parent</name>
-
+    <name>Android SDK ApiDemos - Parent</name>
+    <description>Android SDK ApiDemos taken from 2.3.4 API Level 10</description>
     <dependencyManagement>
         <dependencies>
             <dependency>
