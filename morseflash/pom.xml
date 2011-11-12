@@ -5,7 +5,7 @@
     <artifactId>morseflash-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>MorseFlash Parent</name>
+    <name>MorseFlash - Parent</name>
 
     <dependencyManagement>
         <dependencies>

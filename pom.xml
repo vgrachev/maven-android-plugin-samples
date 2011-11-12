@@ -17,18 +17,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
-    <artifactId>samples</artifactId>
+    <artifactId>aggregator</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Android Maven Plugin - Samples</name>
+    <name>Android Maven Plugin Samples - Aggregator</name>
 
     <modules>
-        <module>apidemos-15</module>
+        <module>apidemos-android-10</module>
         <module>helloflashlight</module>
         <module>morseflash</module>
         <module>scala</module>
         <module>libraryprojects</module>
         <module>native</module>
+        <module>support4demos</module>
     </modules>
 
     <url>http://code.google.com/p/maven-android-plugin</url>
@@ -36,7 +37,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <scm.branch>master</scm.branch>
-        <maven.version>2.2.1</maven.version>
+        <maven.version>3.0.3</maven.version>
     </properties>
     <scm>
         <url>http://github.com/jayway/maven-android-plugin-samples/tree/${scm.branch}</url>
