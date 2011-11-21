@@ -26,7 +26,8 @@
         <module>apidemos-android-10</module>
         <module>helloflashlight</module>
         <module>morseflash</module>
-        <module>scala</module>
+<!-- deactivated scala example for now so we can pull in the new proguard mojo and fix it together -->
+<!--       <module>scala</module> -->
         <module>libraryprojects</module>
         <module>native</module>
         <module>support4demos</module>
