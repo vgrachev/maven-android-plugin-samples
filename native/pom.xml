@@ -14,8 +14,7 @@
     <module>java-with-native-dependency</module>
     <module>java-with-native-statically-linked-dependency</module>
     <module>java-with-native-library</module>
-<!-- disabled since it does not work with new proguard integration -->
-<!--    <module>java-transient-dependency</module> -->
+    <module>java-transient-dependency</module>
     <module>native-code</module>
     <module>native-static-lib</module>
     <module>native-code-including-static-lib</module>
