@@ -16,7 +16,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE    := mixed-mode
+LOCAL_MODULE    := mixed-java-native-code
 LOCAL_SRC_FILES := hello-jni.c
 
 include $(BUILD_SHARED_LIBRARY)
