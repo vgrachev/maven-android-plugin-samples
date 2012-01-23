@@ -10,15 +10,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>android</groupId>
+            <!-- android 4x from the central repository-->
+            <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>4.0_r1</version>
+            <version>4.0.1.2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <!-- compatibibilty library at this stage still from Maven Android SDK Deployer -->
             <groupId>android.support</groupId>
             <artifactId>compatibility-v4</artifactId>
-            <version>r4</version>
+            <version>r6</version>
         </dependency>
     </dependencies>
 
